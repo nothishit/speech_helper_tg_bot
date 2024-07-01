@@ -33,7 +33,7 @@ async def send_transcrypt_mp3_speech_flow(message: Message):
     await bot.download(message.audio.file_id, file_name)
     
     file_name_wav = f'{split_tup[0]}_{message.from_user.full_name}.wav'
-    subprocess.call([ffmpeg_path, '-i', file_name, file_name_wav], shell=True)
+    subprocess.call([ffmpeg_path, '-i', file_name, file_name_wav])
 
     text = start_speech_flow(file_name_wav)
     await message.answer(SPEECH_FLOW)
@@ -55,7 +55,7 @@ async def send_transcrypt_speech_flow(message: Message):
     await bot.download(message.voice.file_id, file_name)
     
     file_name_wav = f'{message.from_user.full_name}.wav'
-    subprocess.call([ffmpeg_path, '-i', file_name, file_name_wav], shell=True)
+    subprocess.call([ffmpeg_path, '-i', file_name, file_name_wav])
     
     text = start_speech_flow(file_name_wav)
     await message.answer(SPEECH_FLOW)
@@ -79,7 +79,7 @@ async def send_transcrypt_mp3_google_recognition(message: Message):
     await bot.download(message.audio.file_id, file_name)
     
     file_name_wav = f'{split_tup[0]}_{message.from_user.full_name}.wav'
-    subprocess.call([ffmpeg_path, '-i', file_name, file_name_wav], shell=True)
+    subprocess.call([ffmpeg_path, '-i', file_name, file_name_wav])
 
     with sr.AudioFile(file_name_wav) as source:
         audio = r.record(source)
