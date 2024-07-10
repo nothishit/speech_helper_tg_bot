@@ -1,8 +1,8 @@
 import asyncio, os
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
-from app.handlers import router
-from app.callbacks import call_router
+from handlers import router
+from callbacks import call_router
 from dotenv import load_dotenv
 
 load_dotenv()
