@@ -1,6 +1,6 @@
 FROM python:3.12.4-slim-bullseye 
 
-RUN sudo apt-get update && apt-get upgrade && apt-get install ffmpeg
+RUN apt-get update && apt-get upgrade && apt-get install ffmpeg
 
 COPY app ./
 
