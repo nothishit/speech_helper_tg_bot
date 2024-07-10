@@ -13,6 +13,6 @@ def SEND_AUDIO_OR_VOICE(user_name):
 SPEECH_RECOGNITION = "Cинтезировано с помощью <strong>SpeechRecognition</strong>:"
 SPEECH_FLOW = "Cинтезировано с помощью <strong>SpeechFlow</strong>:"
 
-INFO_TEXT = "Speech Recognition обрабатывает файлы/гс длительностью не более 1 минуты и весом менее 10 Мб.\n\nSpeechFlow обрабатывает не более 5 часов в месяц."
+INFO_TEXT = "Speech Recognition обрабатывает файлы/гс длительностью не более 1 минуты и весом до 10 Мб.\n\nSpeechFlow обрабатывает не более 5 часов в месяц."
 
 UNKNOWN_TEXT = "Не удалось распознать текст."
