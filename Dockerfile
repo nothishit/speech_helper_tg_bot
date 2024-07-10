@@ -4,8 +4,10 @@ RUN apt-get update -y && apt-get upgrade -y && apt-get install ffmpeg -y
 
 COPY app ./
 
+COPY main.py ./
+
 COPY requirements.txt ./
 
 RUN pip install -r requirements.txt
 
-CMD ["python", "/app/main.py"]
+CMD ["python", "main.py"]
