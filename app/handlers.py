@@ -5,9 +5,9 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.filters import Command
 from aiogram.types import Message
 from aiogram.fsm.state import StatesGroup, State
-from texts import *
-from speechflow import start_speech_flow
-import keyboards as kb
+from app.texts import *
+from app.speechflow import start_speech_flow
+import app.keyboards as kb
 from aiogram.fsm.context import FSMContext
 
 load_dotenv()

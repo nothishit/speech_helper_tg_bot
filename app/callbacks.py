@@ -1,8 +1,8 @@
 from aiogram.types import CallbackQuery
 from aiogram.fsm.context import FSMContext
-from texts import *
-import keyboards as kb
-from handlers import Crypt
+from app.texts import *
+import app.keyboards as kb
+from app.handlers import Crypt
 from aiogram import F, Router
 
 call_router = Router()
