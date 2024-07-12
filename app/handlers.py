@@ -25,6 +25,14 @@ async def commands_start(message: Message, state: FSMContext):
     await state.set_state(Crypt.speechrecognition_state)
     await message.answer(WELCOME_TEXT(message.from_user.first_name), reply_markup=kb.menu)
 
+@router.message(Command('change'))
+async def info(message: Message):
+    await message.answer(MAIN_TEXT(message.from_user.first_name), reply_markup=kb.menu)
+
+@router.message(Command('info'))
+async def info(message: Message):
+    await message.answer(INFO_TEXT)
+
 # speechflow
 @router.message(F.audio, Crypt.speechflow_state)
 async def send_transcrypt_mp3_speech_flow(message: Message):
