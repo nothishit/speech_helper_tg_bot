@@ -12,7 +12,7 @@ dp = Dispatcher()
 async def main():
     dp.include_router(router)
     dp.include_router(call_router)
-    dp.bot.set_my_commands([
+    bot.set_my_commands([
         types.BotCommand("start", "Запустить бота"),
         types.BotCommand("info", "Информация о методах перевода речи в текст"),
         types.BotCommand("change", "Изменить метод перевода речи в текст"),
